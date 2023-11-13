@@ -1,16 +1,12 @@
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> 
+{% extends 'pilote/base.html' %}
 
-<link rel="stylesheet" href="{% static 'css/pilote.css' %}"> 
-
-< div > 
-
-    < h1 >< a  href = "/" > Django Girls Blog < / a < / h1 > 
-< / div >
- 
-{% for pilote in pilotes %}
-    < div > 
-        < h2 >< a  href = "" > {{ pilote.title }} < / a >< / h2 > 
-        < p > {{ pilote.equipe|linebreaksbr }} < / p > 
-    < / div > 
-{% endfor %}
+{% block content %}
+    {% for character in characters %}
+        <article class="pilotes">
+            <h2><a href="">{{ character.id_character }}</a></h2>
+            <p>{{ character.equipe|linebreaksbr }}</p>
+            <p>{{ character.etat|linebreaksbr }}</p>
+            <p>{{ character.lieu|linebreaksbr }}</p>
+        </article>
+    {% endfor %}
+{% endblock %}

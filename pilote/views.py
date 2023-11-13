@@ -3,5 +3,5 @@ from .models import Character
 
 
 def character_list(request):
-    pilotes = Character.objects
-    return render(request, 'pilote/character_list.html', {})
+    characters = Character.objects.order_by('equipe')
+    return render(request, 'pilote/character_list.html', {'characters' : characters})
