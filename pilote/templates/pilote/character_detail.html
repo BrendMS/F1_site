@@ -1,0 +1,14 @@
+{% extends 'pilote/base.html' %}
+
+{% block content %}
+<div  class = "page-header"> 
+    <h1> 
+        <a  href = "/" > {{ character.id_character }} </a> 
+    </h1 > 
+    <form  method = "POST"  class = "post-form" > {% csrf_token %}
+         <b > Change: </b > {{ form.as_ul }}
+         <button  type = "submit"  class = "btn btn-outline-light" > OK </button> 
+    </form> 
+</div>
+ 
+{% endblock %}

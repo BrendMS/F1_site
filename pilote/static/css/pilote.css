@@ -1,5 +1,5 @@
 .page-header {
-    background-color: #C25100;
+    background-color: #ffffff;
     margin-top: 0;
     margin-bottom: 40px;
     padding: 20px 20px 20px 40px;
@@ -9,7 +9,7 @@
 .page-header h1 a,
 .page-header h1 a:visited,
 .page-header h1 a:active {
-    color: #ffffff;
+    color: #F70D1A;
     font-size: 36pt;
     text-decoration: none;
 }
@@ -18,7 +18,18 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Monaco', monospace;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+  
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .save {
@@ -35,7 +46,7 @@ h4 {
 .top-menu:visited {
     color: #ffffff;
     float: right;
-    font-size: 26pt;
+    font-size: 14pt;
     margin-right: 20px;
 }
 
@@ -45,7 +56,7 @@ h4 {
 
 .pilotes h2 a,
 .pilotes h2 a:visited {
-    color: #000000;
+    color: #F70D1A;
 }
 
 .pilotes > .equipe,
@@ -53,10 +64,13 @@ h4 {
     float: right;
 }
 
+.center{
+    width: 75%;
+}
 .btn-secondary,
 .btn-secondary:visited {
     color: #C25100;
-    background: none;
+    background: #F70D1A;
     border-color: #C25100;
 }
 
@@ -65,3 +79,6 @@ h4 {
     background-color: #C25100;
 }
 
+body {
+    background-color:  #ffffff;
+}
