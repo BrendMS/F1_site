@@ -6,8 +6,6 @@ class MoveForm(forms.ModelForm):
  
     class Meta:
         model = Character
-        fields = ('equipe', 'etat', 'lieu', 'photo')
+        fields = ('lieu',)
 
-        model_equip = Equipement
-        fields_equip = ('disponibilite', 'photo') 
 
