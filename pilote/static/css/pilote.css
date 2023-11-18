@@ -1,5 +1,12 @@
+/* petit ecran */
+body {
+    background-color: #001D46;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 .page-header {
-    background-color: #ffffff;
+    background-color: #FFCC00;
     margin-top: 0;
     margin-bottom: 40px;
     padding: 20px 20px 20px 40px;
@@ -9,10 +16,12 @@
 .page-header h1 a,
 .page-header h1 a:visited,
 .page-header h1 a:active {
-    color: #F70D1A;
-    font-size: 36pt;
+    color: #D2003C;
+    font-size: 50px;
     text-decoration: none;
+    font-weight: 900;
 }
+
 
 h1,
 h2,
@@ -21,11 +30,39 @@ h4 {
     font-family: 'Monaco', monospace;
 }
 
-.column {
-    float: left;
-    width: 50%;
+.character-link,
+.character-link a:link,
+.character-link a:visited {
+    color: #D2003C;
+    text-decoration: none;
 }
-  
+
+.character-link a:hover {
+    color: #FF0000; 
+    text-decoration: underline; 
+}
+
+.character-link a:active {
+    color: #990000; 
+}
+
+
+.section-title {
+    color: #D2003C;
+    font-weight: 1000;
+}
+
+.prenom{
+    color: #D2003C;
+    font-weight: 1000;    
+}
+
+.column {
+    float: none; 
+    width: 100%; 
+    margin-right: 0; 
+}
+
 .row:after {
     content: "";
     display: table;
@@ -56,7 +93,7 @@ h4 {
 
 .pilotes h2 a,
 .pilotes h2 a:visited {
-    color: #F70D1A;
+    color: #D2003C;
 }
 
 .pilotes > .equipe,
@@ -64,9 +101,25 @@ h4 {
     float: right;
 }
 
-.center{
+.center {
     width: 75%;
 }
+
+.equipms {
+    margin-right: 0; 
+}
+
+.equipms img {
+    width: 100%;
+    height: 200px; 
+    object-fit: cover; 
+}
+
+.attributes{
+    color:#FFFFFF;
+
+}
+
 .btn-secondary,
 .btn-secondary:visited {
     color: #C25100;
@@ -79,6 +132,19 @@ h4 {
     background-color: #C25100;
 }
 
-body {
-    background-color:  #ffffff;
+/* ecran gross*/
+@media (min-width: 768px) {
+    body {
+        padding: 20px; 
+    }
+
+    .column {
+        float: left;
+        width: 50%; 
+        margin-right: 10px; 
+    }
+
+    .equipms {
+        margin-right: 10px; 
+    }
 }

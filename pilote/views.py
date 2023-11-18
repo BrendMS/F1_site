@@ -82,7 +82,7 @@ def character_detail(request, id_character):
                 message = f"La piste de course est deja occupé par {' et '.join(occupants)}!"
         else:
             error = True
-            message = f"{character.id_character} ne peut pas aller au lieu demandé {nouveau_lieu.id_equip}! Il est {character.etat} pour ça :("
+            message = f"{character.id_character} ne peut pas aller au(x) {nouveau_lieu.id_equip}! Il est {character.etat} pour ça :("
         return render(request,
             'pilote/character_detail.html',
             {'character': character, 'message': message, 'error': error, 'lieu': ancien_lieu, 'nouveau_lieu': nouveau_lieu, 'form': form})

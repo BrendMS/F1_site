@@ -8,7 +8,7 @@
     <form  method = "POST"  class = "post-form" > {% csrf_token %}
          <b > Change: </b > {{ form.as_ul }}
          <button  type = "submit"  class = "btn btn-outline-light" > OK </button>
-         <a href="{% url 'character_list' %}">Back</a> 
+         <a href="{% url 'character_list' %}" class="btn btn-outline-light">Back</a>
          {% if message != ''%}
                 <div style="width: 100%; margin-right: 0%;" role="alert">
                     {{message}}

@@ -1,9 +1,9 @@
 {% extends 'pilote/base.html' %}
 
 {% block content %}
-    <table>
+    <table class="mb-4">
         <tr>
-            <th colspan="5"><h1><a href="/">Pilotes</a></h1></th>
+            <th colspan="5"><h1 class="section-title">Pilotes</h1></th>
         </tr>
         <tr>
             {% for character in characters %}
@@ -12,43 +12,63 @@
         </tr>        
         <tr>
             {% for character in characters %}
-                <td><h2><a href="{% url 'character_detail' id_character=character.id_character %}">{{ character.id_character }}</a></h2></td>
+                <td><h2 class="character-link"><a href="{% url 'character_detail' id_character=character.id_character %}">{{ character.id_character }}</a></h2></td>
             {% endfor %}
         </tr>
         <tr>
             {% for character in characters %}
-                <td><p>{{ character.equipe }}</p></td>
+                <td>
+                    <div class="attributes">
+                        <p>{{ character.equipe }}</p>
+                    </div>
+                </td>
             {% endfor %}
         </tr>
         <tr>
             {% for character in characters %}
-                <td><p>{{ character.etat }}</p></td>
+            <td>
+                <div class="attributes">
+                    <p>{{ character.etat }}</p>
+                </div>
+            </td>
             {% endfor %}
         </tr>
         <tr>
             {% for character in characters %}
-                <td><p>{{ character.lieu }}</p></td>
+            <td>
+                <div class="attributes">
+                    <p>{{ character.lieu }}</p>
+                </div>
+            </td>            
             {% endfor %}
         </tr>
     </table>
 
-    <table>
+    <table class="mb-4">
         <tr>
-            <th colspan="5"><h1><a href="/">Equipements</a></h1></th>
+            <th colspan="5"><h1 class="section-title">Equipements</h1></th>
         </tr>
         <tr>
             {% for equipement in equipements %}
-                <td><img src="{{equipement.photo}}" class="center"></td>
-            {% endfor %}
+            <td>
+                <div class="equipms">
+                    <img src="{{equipement.photo}}" class="center">
+                </div>
+            </td>     
+        {% endfor %}
         </tr>        
         <tr>
             {% for equipement in equipements %}
-                <td><h2><a>{{ equipement.id_equip }}</a></h2></td>
+                <td><h2 class="prenom"><a>{{ equipement.id_equip }}</a></h2></td> 
             {% endfor %}
         </tr>
         <tr>
             {% for equipement in equipements %}
-                <td><p>{{ equipement.disponibilite }}</p></td>
+            <td>
+                <div class="attributes">
+                    <p>{{ equipement.disponibilite }}</p>
+                </div>
+            </td>
             {% endfor %}
         </tr>
     </table>
